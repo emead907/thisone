@@ -1,0 +1,4 @@
+InvalidFileFormatException: Too many dimensions
+	at CircuitBoard.<init>(CircuitBoard.java:69)
+	at CircuitTracer.<init>(CircuitTracer.java:57)
+	at CircuitTracer.main(CircuitTracer.java:27)

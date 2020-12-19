@@ -1,0 +1,60 @@
+#!/bin/sh
+
+# CircuitTracer 
+# CS221
+
+# Delete old class files 
+for file in ./*.class
+do
+    rm -f $file
+done
+
+# Compile the CircuitTracer class
+javac CircuitTracer.java 
+
+# Run through tests
+echo "**** Running Valid and Invalid Files ****"
+echo ""
+for file in ./*.dat
+do
+    echo $file
+    name="$(basename $file .dat)"
+    sorted=${name}.sorted
+
+    # Run using stack as storage, console output  
+    echo -  $file Storage using stack  
+    java CircuitTracer -s -c $file > stack.out 2>&1
+    sort stack.out > stack.sorted
+    echo stack-diff:
+    diff stack.sorted $sorted 
+    echo end stack-diff 
+    echo ""
+
+    # Run using queue as storage, console output  
+    echo - $file Storage using queue 
+    java CircuitTracer -q -c $file > queue.out 2>&1
+    sort queue.out > queue.sorted
+    echo queue-diff: 
+    diff queue.sorted $sorted
+    echo end queue-diff 
+    echo ""
+
+    # Run using stack as storage, gui output  
+    echo - $file Storage using stack: GUI 
+    java CircuitTracer -s -g $file 
+    echo ""
+    
+    # Run using queue as storage, gui output  
+    echo - $file Storage using queue: GUI 
+    java CircuitTracer -q -g $file 
+
+    echo ""
+    echo ""
+done
+
+#Remove old files
+rm -f stack.out queue.out stack.sorted queue.sorted
+
+
+
+

@@ -1,0 +1,4 @@
+InvalidFileFormatException: More than one starting point.
+	at CircuitBoard.<init>(CircuitBoard.java:105)
+	at CircuitTracer.<init>(CircuitTracer.java:57)
+	at CircuitTracer.main(CircuitTracer.java:27)

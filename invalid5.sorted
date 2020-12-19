@@ -1,0 +1,4 @@
+	at CircuitBoard.<init>(CircuitBoard.java:94)
+	at CircuitTracer.<init>(CircuitTracer.java:57)
+	at CircuitTracer.main(CircuitTracer.java:27)
+InvalidFileFormatException: N is not a valid component.

@@ -1,0 +1,4 @@
+InvalidFileFormatException: Number of rows incorrect.
+	at CircuitBoard.<init>(CircuitBoard.java:79)
+	at CircuitTracer.<init>(CircuitTracer.java:57)
+	at CircuitTracer.main(CircuitTracer.java:27)

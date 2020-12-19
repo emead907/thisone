@@ -1,0 +1,38 @@
+To run the tests, copy all of the files to a directory on Onyx.
+
+Copy your CircuitTracer.java, CircuitBoard.java, and other files
+needed to run your program to the same directory.
+
+To change the permissions on the process file to make it executable, type
+on the command-line:
+
+   chmod 775 process 
+
+To run the script, type on the command-line:
+
+   ./process > output
+
+All of your invalid files should print exception information on the console.
+
+Open the file "output" with a simple text editor, like kWrite.
+
+Your output should look something like this:
+
+     ./valid1.dat
+     - ./valid1.dat Storage using stack
+     stack-diff:
+     end stack-diff
+
+     - ./valid1.dat Storage using queue
+     queue-diff:
+     end queue-diff
+
+     - ./valid1.dat Storage using stack: GUI
+     GUI is not supported at this time.
+
+     - ./valid1.dat Storage using queue: GUI
+     GUI is not supported at this time.
+
+Between stack-diff: end stack-diff, there may be lines  beginning with a
+'<' or a '>', but there should only be white space after them.
+Your GUI message may be slightly different too. 

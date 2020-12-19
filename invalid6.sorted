@@ -1,0 +1,4 @@
+	at CircuitBoard.<init>(CircuitBoard.java:85)
+	at CircuitTracer.<init>(CircuitTracer.java:57)
+	at CircuitTracer.main(CircuitTracer.java:27)
+InvalidFileFormatException: Number of columns incorrect
